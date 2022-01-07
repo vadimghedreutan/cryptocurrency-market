@@ -37,8 +37,9 @@ function Cryptocurrencies({ simplified }) {
 							/>
 						</svg>
 						<input
-							class="focus:ring-2 focus:ring-blue-500 focus:outline-none w-full text-sm leading-6 text-gray-50 placeholder-gray-400 bg-gray-700 rounded-md py-2 pl-10 ring-1 ring-gray-600 shadow-sm"
-							type="search"
+							class="focus:ring-2 focus:ring-blue-500 focus:outline-none w-full text-sm leading-6 
+							text-gray-50 placeholder-gray-400 bg-gray-700 rounded-md py-2 pl-10 ring-1 ring-gray-600 shadow-sm"
+							type="text"
 							name="search"
 							placeholder="Search Cryptocurrency"
 							onChange={(e) => setSearchTerm(e.target.value)}

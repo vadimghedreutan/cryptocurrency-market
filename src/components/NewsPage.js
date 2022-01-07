@@ -27,7 +27,7 @@ function News({ simplified }) {
 				<div className="pb-4">
 					<Select
 						showSearch
-						className="w-1/3 text-gray-50"
+						className="w-full sm:w-1/3 text-gray-50"
 						placeholder="Select a Crypto"
 						optionFilterProp="children"
 						onChange={(value) => setNewsCategory(value)}
