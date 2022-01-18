@@ -50,8 +50,8 @@ function Cryptocurrencies({ simplified }) {
 			<div className="gap-4 grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))]">
 				{cryptos?.map((currency) => (
 					<CryptoList
-						key={currency.id}
-						id={currency.id}
+						key={currency.uuid}
+						id={currency.uuid}
 						rank={currency.rank}
 						name={currency.name}
 						iconUrl={currency.iconUrl}

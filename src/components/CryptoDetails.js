@@ -24,7 +24,7 @@ const { Option } = Select
 
 function CryptoDetails() {
 	const { coinId } = useParams()
-	const [timeperiod, setTimeperiod] = useState('7d')
+	const [timeperiod, setTimeperiod] = useState('24h')
 	const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
 	const { data: coinHistory } = useGetCryptoHistoryQuery({
 		coinId,
@@ -119,7 +119,7 @@ function CryptoDetails() {
 			{/* Crypto Chart */}
 			<div className="mb-2">
 				<Select
-					defaultValue="7d"
+					defaultValue="24h"
 					className="w-1/3 text-gray-50"
 					placeholder="Select Timeperiod"
 					onChange={(value) => setTimeperiod(value)}
@@ -143,7 +143,10 @@ function CryptoDetails() {
 					</h2>
 					<CardLayout>
 						{stats.map(({ icon, title, value }) => (
-							<div className="flex items-center justify-between py-2">
+							<div
+								className="flex items-center justify-between py-2"
+								key={title}
+							>
 								<div className="flex items-center space-x-2">
 									<span>{icon}</span>
 									<p>{title}</p>
@@ -160,7 +163,10 @@ function CryptoDetails() {
 					<h2 className="mb-2">Other Value Statistics</h2>
 					<CardLayout>
 						{genericStats.map(({ icon, title, value }) => (
-							<div className="flex items-center justify-between py-2">
+							<div
+								className="flex items-center justify-between py-2"
+								key={title}
+							>
 								<div className="flex items-center space-x-2">
 									<span>{icon}</span>
 									<p>{title}</p>
